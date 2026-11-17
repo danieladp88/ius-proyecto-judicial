@@ -1,0 +1,27 @@
+test_campo_extra_y_tipo_incorrecto (test_api.ContratoAPI.test_campo_extra_y_tipo_incorrecto) ... ok
+test_campo_faltante (test_api.ContratoAPI.test_campo_faltante) ... ok
+test_campo_vacio (test_api.ContratoAPI.test_campo_vacio) ... ok
+test_categoria_desconocida (test_api.ContratoAPI.test_categoria_desconocida) ... ok
+test_combinacion_invalida (test_api.ContratoAPI.test_combinacion_invalida) ... ok
+test_informe_coincide_con_prediccion (test_api.ContratoAPI.test_informe_coincide_con_prediccion) ... ok
+test_metadatos_coherentes_con_archivo (test_api.ContratoAPI.test_metadatos_coherentes_con_archivo) ... ok
+test_prediccion_valida (test_api.ContratoAPI.test_prediccion_valida) ... ok
+test_ruta_anterior_compatible (test_api.ContratoAPI.test_ruta_anterior_compatible) ... ok
+test_salud (test_api.ContratoAPI.test_salud) ... ok
+test_ambiguedad_localidad (test_chat.ChatGuiado.test_ambiguedad_localidad) ... ok
+test_cambia_localidad_limpia_dependencias (test_chat.ChatGuiado.test_cambia_localidad_limpia_dependencias) ... ok
+test_contexto_fabricado_no_predice (test_chat.ChatGuiado.test_contexto_fabricado_no_predice) ... ok
+test_explicacion_mae (test_chat.ChatGuiado.test_explicacion_mae) ... ok
+test_fuera_de_alcance (test_chat.ChatGuiado.test_fuera_de_alcance) ... ok
+test_guia_y_confirmacion (test_chat.ChatGuiado.test_guia_y_confirmacion) ... ok
+test_juzgado_invalido (test_chat.ChatGuiado.test_juzgado_invalido) ... ok
+test_no_inventa_para_desconocidos (test_chat.ChatGuiado.test_no_inventa_para_desconocidos) ... ok
+test_chat_valida_json (test_chat.ContratoFront.test_chat_valida_json) ... ok
+test_falla_api (test_chat.ContratoFront.test_falla_api) ... ok
+test_pagina_y_assets (test_chat.ContratoFront.test_pagina_y_assets) ... ok
+test_payload_grande (test_chat.ContratoFront.test_payload_grande) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.345s
+
+OK

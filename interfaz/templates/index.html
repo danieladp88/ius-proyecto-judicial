@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>IUS · Analítica judicial</title><link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}"><script defer src="{{ url_for('static', filename='app.js') }}"></script></head>
+<body>
+<a class="skip" href="#principal">Saltar al contenido</a>
+<aside class="sidebar">
+ <a class="brand" href="#consulta" aria-label="IUS, inicio"><span class="brand-mark">i</span><span>IUS<span class="brand-sub">ANALÍTICA JUDICIAL</span></span></a>
+ <div class="workspace">ESPACIO DE ANÁLISIS</div>
+ <nav aria-label="Navegación principal">
+  <button class="nav-item active" data-page="consulta" aria-current="page"><span aria-hidden="true">＋</span>Nueva consulta</button>
+  <button class="nav-item" data-page="chat"><span aria-hidden="true">◌</span>Asistente<span class="pill">CHAT</span></button>
+  <button class="nav-item" data-page="historial"><span aria-hidden="true">↺</span>Historial<span id="history-count">0</span></button>
+  <button class="nav-item" data-page="modelo"><span aria-hidden="true">▥</span>El modelo</button>
+ </nav>
+ <div class="sidebar-note"><span class="dot"></span> PROTOTIPO ACADÉMICO<p></p><small>Buenos Aires · 2016–2019</small></div>
+ <div class="authors"><span class="avatar">DB</span><div>Palazzo & Barbizan<small>Práctica Profesional · 2026</small></div></div>
+</aside>
+<main id="principal">
+ <header class="topbar"><div>PROYECTO JUDICIAL <span>/</span> <span id="breadcrumb">Nueva consulta</span></div><span class="service" id="service-status" role="status"><span class="dot"></span>Conectando</span></header>
+ <div class="content">
+ <div id="global-error" class="alert error" role="alert" hidden><span id="global-error-text"></span><button class="btn secondary" id="retry">Reintentar conexión</button></div>
+ <section id="page-consulta" class="page">
+  <div class="heading"><div><div class="eyebrow">CONSULTA INDIVIDUAL</div><h1>Una referencia para<br>entender los tiempos.</h1><p>Explorá la duración histórica de causas civiles de Buenos Aires.<br class="desktop"> Completá los datos y obtené una estimación con sus antecedentes.</p></div><div class="scope"><span>ÁMBITO DEL MODELO</span><strong>Buenos Aires</strong><small>Causas finalizadas · 2016–2019</small></div></div>
+  <div class="query-grid">
+   <div class="panel form-panel"><div class="panel-title"><div><span class="eyebrow">01 · DATOS DE LA CAUSA</span><h2>Configurá tu consulta</h2></div><span class="subtle-tag">3 datos</span></div>
+    <form id="query-form">
+     <label for="localidad">Localidad <span>01</span></label><select id="localidad" required disabled><option value="">Cargando localidades…</option></select>
+     <div class="field-help">Seleccioná dónde tramitó la causa.</div>
+     <label for="juzgado">Juzgado <span>02</span></label><select id="juzgado" required disabled><option value="">Primero elegí una localidad</option></select>
+     <label for="objeto">Objeto del litigio <span>03</span></label><select id="objeto" required disabled><option value="">Primero elegí un juzgado</option></select>
+     <div class="field-help" id="combination-help">Las opciones se ajustan a los antecedentes disponibles.</div>
+     <div class="form-actions"><button id="estimate" type="submit" class="btn primary" disabled>Estimar duración <span aria-hidden="true">↗</span></button><button type="button" class="btn ghost" id="clear-form">Limpiar</button></div>
+    </form>
+    <div class="form-foot"><span aria-hidden="true">⌁</span> La consulta no requiere datos personales ni un número de expediente.</div>
+   </div>
+   <div class="panel result-panel" id="result-panel" aria-live="polite">
+    <div class="panel-title"><div><span class="eyebrow">02 · RESULTADO</span><h2>Estimación histórica</h2></div><span class="subtle-tag" id="result-tag">Por consultar</span></div>
+    <div id="empty-result" class="empty-result"><div class="empty-graphic" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div><h3>Cada consulta necesita contexto.</h3><p>Elegí los datos de la causa para ver la duración estimada, los antecedentes y el informe.</p><button class="text-link" data-go="chat">¿Preferís conversar? Abrí el asistente ↗</button></div>
+    <div id="result-content" hidden></div>
+   </div>
+  </div>
+  <div class="context-strip"><div><span class="context-icon">i</span><p><strong>Una estimación histórica, con límites claros.</strong><br>El resultado no representa el tiempo restante ni una fecha asegurada de resolución.</p></div><button class="text-link" data-go="modelo">Conocer el modelo ↗</button></div>
+  <div class="bottom-grid"><div><span class="eyebrow">UNA BASE PARA EXPLORAR</span><h3>Datos detrás de cada consulta</h3></div><div class="small-stat"><strong id="total-cases">—</strong><span>causas utilizadas</span></div><div class="small-stat"><strong id="total-cities">—</strong><span>localidades disponibles</span></div><div class="small-stat"><strong>Random Forest</strong><span>modelo de regresión</span></div></div>
+ </section>
+ <section id="page-chat" class="page" hidden>
+  <div class="page-heading"><div class="eyebrow">ASISTENTE DE CONSULTA</div><h1>Empezá con una pregunta.</h1><p>Te ayudo a completar los datos y a interpretar la estimación.</p></div>
+  <div class="chat-layout"><div class="panel chat-panel"><div class="chat-top"><div><span class="assistant-icon">i</span><strong>Asistente IUS</strong><span class="subtle-tag">Guiado</span></div><button id="new-chat" class="btn ghost">Nueva conversación</button></div><div id="messages" class="messages" role="log" aria-live="polite" aria-label="Conversación"></div><div id="suggestions" class="suggestions" aria-label="Respuestas sugeridas"></div><form id="chat-form" class="chat-input"><label class="sr-only" for="chat-message">Mensaje para el asistente</label><input id="chat-message" maxlength="1500" autocomplete="off" placeholder="Ej.: una causa en Morón, juzgado 7" required><button type="submit" class="btn primary" id="send-chat" aria-label="Enviar mensaje">Enviar ↑</button></form><div class="chat-disclaimer">Asistente guiado, sin IA generativa. Las estimaciones provienen del modelo judicial.</div></div><aside class="chat-aside"><div class="eyebrow">TU CONSULTA</div><h3>Los datos que vamos reuniendo</h3><dl id="chat-context"></dl><hr><h3>¿En qué te puedo ayudar?</h3><p>Buscar una combinación, estimar su duración histórica y explicar el error del modelo.</p><p class="muted">No brinda asesoramiento legal ni redacta escritos. Evitá ingresar datos personales.</p></aside></div>
+ </section>
+ <section id="page-historial" class="page" hidden><div class="page-heading"><div class="eyebrow">CONSULTAS REALIZADAS</div><h1>Tu recorrido de análisis.</h1><p>Volvé a los resultados de esta sesión y descargá sus informes.</p></div><div class="panel"><div class="history-heading"><h2>Historial de la sesión</h2><button class="btn ghost" id="clear-history">Vaciar historial</button></div><p class="muted">Se guarda solo en la memoria de esta página. Se elimina al recargar o cerrar.</p><div id="history-list"></div></div></section>
+ <section id="page-modelo" class="page" hidden><div class="page-heading"><div class="eyebrow">TRANSPARENCIA</div><h1>Conocé qué hay detrás.</h1><p>El alcance, la evaluación y las limitaciones del modelo que estás consultando.</p></div><div id="model-content"></div></section>
+ <footer><span>IUS · Prototipo de análisis histórico</span><span>Daniela Palazzo y Brian Barbizan</span></footer>
+ </div>
+</main><div id="toast" class="toast" role="status" hidden></div>
+</body></html>

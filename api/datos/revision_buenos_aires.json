@@ -1,0 +1,33 @@
+{
+  "fuente": "Oralidad en los procesos civiles - Buenos Aires",
+  "url": "https://datos.jus.gob.ar/dataset/85ea4aa6-6873-4583-8d8d-7b6463a901f6/resource/de4e8278-340d-4190-9f0b-c41292f673d4/download/oralidad-procesos-civiles-buenos-aires.xlsx",
+  "sha256": "a56632ff4587cd18452164252915e4342e95fffeef1d8573e003ee46f708639f",
+  "filas_originales": 40120,
+  "duplicados_exactos": 1159,
+  "filas_sin_inicio_valido": 3340,
+  "filas_sin_fin_valido": 28275,
+  "duraciones_negativas": 0,
+  "filas_con_duracion_observable": 10161,
+  "localidades_distintas": 26,
+  "primera_finalizacion": "2016-08-12",
+  "ultima_finalizacion": "2019-10-21",
+  "columnas": [
+    "provincia_id",
+    "provincia_nombre",
+    "localidad_nombre",
+    "juzgado_numero",
+    "causa_id",
+    "causa_objeto_litigio_descripcion",
+    "causa_fecha_recepcion",
+    "causa_fecha_ingreso",
+    "audiencia_preliminar_fecha",
+    "audiencia_preliminar_resultado",
+    "apertura_prueba_fecha",
+    "audiencia_vista_causa_fecha",
+    "audiencia_vista_causa_resultado",
+    "llamamiento_autos_fecha",
+    "proceso_finalizacion_fecha",
+    "proceso_resultado_descripcion",
+    "clase_proceso_descripcion"
+  ]
+}

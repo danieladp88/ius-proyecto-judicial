@@ -1,0 +1,102 @@
+[
+  {
+    "caso": 1,
+    "entrada": {
+      "localidad_nombre": "MORON",
+      "juzgado_numero": "7",
+      "causa_objeto_litigio_descripcion": "DAÑOS Y PERJ.AUTOM. C/LES. O MUERTE (EXC.ESTADO)"
+    },
+    "resultado": {
+      "provincia": "Buenos Aires",
+      "entrada": {
+        "localidad_nombre": "MORON",
+        "juzgado_numero": "7",
+        "causa_objeto_litigio_descripcion": "DAÑOS Y PERJ.AUTOM. C/LES. O MUERTE (EXC.ESTADO)"
+      },
+      "duracion_estimada_dias": 758.4,
+      "duracion_estimada_meses": 24.9,
+      "antecedentes_combinacion": 126,
+      "mediana_historica_combinacion_dias": 757.0,
+      "mae_global_prueba_dias": 396.0,
+      "periodo_fuente": {
+        "desde": "2016-08-12",
+        "hasta": "2019-09-30"
+      },
+      "modelo": "RandomForest",
+      "advertencias": [
+        "Solo datos históricos de Buenos Aires",
+        "Solo causas con finalización informada",
+        "Excluir causas sin cierre puede sesgar las duraciones observadas",
+        "La evaluación no demuestra capacidad para estimar plazos actuales",
+        "Se estima duración total histórica, no tiempo restante de causas abiertas"
+      ]
+    }
+  },
+  {
+    "caso": 2,
+    "entrada": {
+      "localidad_nombre": "SAN ISIDRO",
+      "juzgado_numero": "16",
+      "causa_objeto_litigio_descripcion": "DAÑOS Y PERJ.AUTOM. C/LES. O MUERTE (EXC.ESTADO)"
+    },
+    "resultado": {
+      "provincia": "Buenos Aires",
+      "entrada": {
+        "localidad_nombre": "SAN ISIDRO",
+        "juzgado_numero": "16",
+        "causa_objeto_litigio_descripcion": "DAÑOS Y PERJ.AUTOM. C/LES. O MUERTE (EXC.ESTADO)"
+      },
+      "duracion_estimada_dias": 486.8,
+      "duracion_estimada_meses": 16.0,
+      "antecedentes_combinacion": 96,
+      "mediana_historica_combinacion_dias": 483.5,
+      "mae_global_prueba_dias": 396.0,
+      "periodo_fuente": {
+        "desde": "2016-08-12",
+        "hasta": "2019-09-30"
+      },
+      "modelo": "RandomForest",
+      "advertencias": [
+        "Solo datos históricos de Buenos Aires",
+        "Solo causas con finalización informada",
+        "Excluir causas sin cierre puede sesgar las duraciones observadas",
+        "La evaluación no demuestra capacidad para estimar plazos actuales",
+        "Se estima duración total histórica, no tiempo restante de causas abiertas"
+      ]
+    }
+  },
+  {
+    "caso": 3,
+    "entrada": {
+      "localidad_nombre": "TANDIL",
+      "juzgado_numero": "2",
+      "causa_objeto_litigio_descripcion": "AMPARO (INFOREC 10)"
+    },
+    "resultado": {
+      "provincia": "Buenos Aires",
+      "entrada": {
+        "localidad_nombre": "TANDIL",
+        "juzgado_numero": "2",
+        "causa_objeto_litigio_descripcion": "AMPARO (INFOREC 10)"
+      },
+      "duracion_estimada_dias": 197.3,
+      "duracion_estimada_meses": 6.5,
+      "antecedentes_combinacion": 4,
+      "mediana_historica_combinacion_dias": 188.0,
+      "mae_global_prueba_dias": 396.0,
+      "periodo_fuente": {
+        "desde": "2016-08-12",
+        "hasta": "2019-09-30"
+      },
+      "modelo": "RandomForest",
+      "advertencias": [
+        "Solo datos históricos de Buenos Aires",
+        "Solo causas con finalización informada",
+        "Excluir causas sin cierre puede sesgar las duraciones observadas",
+        "La evaluación no demuestra capacidad para estimar plazos actuales",
+        "Se estima duración total histórica, no tiempo restante de causas abiertas",
+        "La combinación exacta tiene menos de cinco antecedentes de ajuste. La estimación tiene soporte limitado."
+      ]
+    }
+  }
+]

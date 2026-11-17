@@ -1,0 +1,20 @@
+{
+  "provincia": "Buenos Aires",
+  "filas_originales": 40120,
+  "duplicados_eliminados_tras_normalizar": 1159,
+  "filas_excluidas_por_fechas": 29734,
+  "duraciones_negativas_excluidas": 0,
+  "filas_excluidas_por_datos_faltantes": 5,
+  "causas_con_datos_conflictivos": 205,
+  "filas_conflictivas_excluidas": 421,
+  "repeticiones_coherentes_eliminadas": 49,
+  "causas_limpias": 8752,
+  "localidades_con_causas_limpias": 25,
+  "primera_finalizacion": "2016-08-12",
+  "ultima_finalizacion": "2019-09-30",
+  "mediana_duracion_dias": 672.0,
+  "duracion_maxima_dias": 5059,
+  "definicion_duracion": "Días corridos entre recepción y finalización.",
+  "criterio_repeticiones": "Entre registros con fechas y variables completas, se conserva una fila por causa cuando coinciden objeto y fechas. Las contradicciones se separan para revisión.",
+  "limitacion": "La muestra incluye solamente causas con fechas observables y finalización informada. No permite estimar directamente el tiempo restante de causas abiertas."
+}

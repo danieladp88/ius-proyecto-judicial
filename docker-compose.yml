@@ -1,0 +1,35 @@
+services:
+  api:
+    build: ./api
+
+    image: api-judicial:ux-chat-1.0
+
+    ports:
+      - "127.0.0.1:8001:8000"
+
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://localhost:8000/', timeout=3)"
+
+      interval: 5s
+      timeout: 4s
+      retries: 10
+      start_period: 10s
+
+  interfaz:
+    build: ./interfaz
+
+    image: interfaz-judicial:ux-chat-1.0
+
+    ports:
+      - "127.0.0.1:8501:8501"
+
+    environment:
+      API_URL: http://api:8000
+
+    depends_on:
+      api:
+        condition: service_healthy

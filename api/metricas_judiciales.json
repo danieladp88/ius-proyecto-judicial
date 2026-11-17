@@ -1,0 +1,46 @@
+{
+  "modelo_elegido": "RandomForest",
+  "causas_totales": 8752,
+  "particion": {
+    "entrenamiento": 5234,
+    "validacion": 1762,
+    "prueba": 1756,
+    "inicio_validacion": "2018-10-25",
+    "inicio_prueba": "2019-04-23",
+    "criterio": "Separación temporal por finalización. Selección en validación y evaluación final en prueba"
+  },
+  "mae_validacion": {
+    "BaseMediana": 407.4381384790011,
+    "RandomForest": 356.23610480514566,
+    "ExtraTrees": 363.62468785471054
+  },
+  "mae_modelo_prueba_dias": 395.9525341685649,
+  "mae_base_prueba_dias": 442.7312072892939,
+  "mejora_mae_porcentaje": 10.56593082903288,
+  "cumple_mejora_10_por_ciento": true,
+  "cobertura_categorias_conocidas_porcentaje": 99.65831435079726,
+  "definicion_cobertura_categorias": "Porcentaje de causas de prueba cuyos valores de localidad, juzgado y objeto aparecieron individualmente en ajuste No exige antecedentes de la combinación exacta ni garantiza precisión",
+  "periodo_finalizacion": {
+    "desde": "2016-08-12",
+    "hasta": "2019-09-30"
+  },
+  "variables": [
+    "localidad_nombre",
+    "juzgado_numero",
+    "causa_objeto_litigio_descripcion"
+  ],
+  "versiones": {
+    "python": "3.13.18",
+    "pandas": "2.2.3",
+    "numpy": "2.4.6",
+    "scikit_learn": "1.6.1",
+    "joblib": "1.6.0"
+  },
+  "limitaciones": [
+    "Solo datos históricos de Buenos Aires",
+    "Solo causas con finalización informada",
+    "Excluir causas sin cierre puede sesgar las duraciones observadas",
+    "La evaluación no demuestra capacidad para estimar plazos actuales",
+    "Se estima duración total histórica, no tiempo restante de causas abiertas"
+  ]
+}

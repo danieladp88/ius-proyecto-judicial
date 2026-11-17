@@ -1,0 +1,17 @@
+{
+  "filas_originales": 1250,
+  "duplicados_exactos_eliminados": 7,
+  "filas_con_objeto_corregido": 93,
+  "filas_excluidas_por_fechas": 697,
+  "duraciones_negativas_excluidas": 1,
+  "filas_excluidas_por_datos_faltantes": 1,
+  "causas_con_datos_conflictivos": 1,
+  "filas_conflictivas_excluidas": 2,
+  "repeticiones_coherentes_eliminadas": 5,
+  "causas_limpias": 537,
+  "correcciones_objeto": {
+    "ORDINARIO DAÑ‘OS Y PERJUICIOS": "ORDINARIO DAÑOS Y PERJUICIOS"
+  },
+  "definicion_duracion": "Días corridos entre recepción y finalización del proceso.",
+  "criterio_causas_repetidas": "Se conserva una fila si coinciden objeto y fechas. Si difieren, la causa se separa para revisión."
+}

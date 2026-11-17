@@ -1,0 +1,3 @@
+﻿provincia_id,provincia_nombre,localidad_nombre,juzgado_numero,causa_id,causa_objeto_litigio_descripcion,causa_fecha_recepcion,causa_fecha_ingreso,audiencia_preliminar_fecha,audiencia_preliminar_resultado,apertura_prueba_fecha,audiencia_vista_causa_fecha,audiencia_vista_causa_resultado,llamamiento_autos_fecha,proceso_finalizacion_fecha,proceso_resultado_descripcion,fecha_inicio,fecha_fin,duracion_dias
+30,Entre Ríos,Concordia,6,8584,ORDINARIO (CIVIL),2018-09-06,2018-09-06,,,,,no concilio,2019-04-15,2019-05-06,Sent.Definitiva,2018-09-06,2019-05-06,242
+30,Entre Ríos,Concordia,6,8584,ORDINARIO (CIVIL),2018-09-06,2018-09-06,,,,,no concilio,2019-05-16,2019-05-17,Sent.Definitiva,2018-09-06,2019-05-17,253
